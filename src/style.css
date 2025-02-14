@@ -139,9 +139,9 @@ max-width: 20vh;
   min-height: 100vh;
   background-color: var(--color-white-light);
   background-image:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-   url("/public/images/room3.jpg");
+   url("/public/images/room7.jpg");
   color: var(--color-black-dark);
-  background-position: center;
+  background-position: center ;
   background-size: cover;
   background-repeat: no-repeat;
   justify-content: center;
