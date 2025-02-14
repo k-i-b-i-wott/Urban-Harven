@@ -32,7 +32,7 @@ header{
   padding: 3rem 2rem;
   background-color: var(--color-white-light);
   margin-bottom: 3rem;
-   
+  
 }
 
 nav ul{
@@ -63,42 +63,41 @@ ul li a:hover{
 }
 
 .logo-wrapper{
- max-height:25vh;
+ max-height:20vh;
 max-width: 20vh;
 }
 .logo-wrapper img{
-  height: 100%;
+  height: 80%;
   width: 100%;
   border-radius: 1rem;
 }
 
-@media screen and (max-width: 768px){
-  header{
-    flex-direction: column;
-    align-items: center;
-  }
-  nav ul{
-    margin-top: 2rem;
-  }
-  .socials{
-    justify-content: center;
-  }
-  
-}
-
 @media screen and (max-width: 768px) {
   header {
-    flex-direction: column;
-    align-items: center;
-    color: var(--color-white);
+    padding: 2rem 1rem;
+    flex: wrap;
+    margin-top: 0;
+    border: 1px solid red;
+    height: fit-content;
+
+    font-size: 2rem;
+    color: var(--color-black);
+  
+  }
+
+ 
+  .logo-wrapper {
+    min-width: none;
+    min-height: 5rem;
+    margin-bottom: 2rem;
   }
 
   .logo-wrapper img {
-    max-width: 70%;
-    max-height: 40%;
+   min-height: 30rem;
   }
 
   .navbar ul {
+  flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -106,6 +105,8 @@ max-width: 20vh;
 
   .socials {
     margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -115,11 +116,14 @@ max-width: 20vh;
   }
 
   .navbar ul {
+    flex-wrap: wrap;
     flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
   .navbar ul li {
-    width: 100%;
+    width: 50%;
     text-align: center;
   }
 }
@@ -131,7 +135,7 @@ max-width: 20vh;
 /* hero section styling */
 
 .hero{ 
-  min-height: 100vh;
+  min-height: 90vh;
   background-color: var(--color-white-light);
   background-image:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
    url("/images/back.jpg");
@@ -143,7 +147,13 @@ max-width: 20vh;
   align-items: center;
   border-radius: 2rem;
 }
-
+@media screen and (max-width: 43.75em) {
+    .hero {
+      min-height: 50vh;
+    }
+  }
+  
+ 
 .hero-text h2{
   font-size: 2rem;
   font-family: var(--font-secondary);
@@ -193,6 +203,7 @@ max-width: 20vh;
   justify-content: center;
   align-items: center;  
   min-height: 22rem;
+  margin-bottom: 2rem;
   }
 
 .service1{
@@ -210,6 +221,93 @@ max-width: 20vh;
   background-color: var(--color-black);
   border-radius: 1rem;
   min-height: 22rem;
+  background-image: url();
 
 }
+
+
+.stats{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;  
+  padding: 10rem 10rem;
+  color: var(--color-white);
+  justify-content: center;
+  align-items: center;  
+  min-height: 22rem;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+  background-color: rgba(232, 232, 230, 0.5);
+  max-height: 25rem;
+  background-origin: padding-box;
+  border-radius: 1.5rem;
+  opacity: 0.0 -1.0;
+  margin: 2rem;
+  flex-wrap: wrap;
+  }
+
+  @media screen and (max-width: 43.75em) {
+    .stats {
+      grid-template-columns: repeat(2, 1fr);
+      min-height: 15rem;
+    }
+    
+    
+  }
 /* end of hero section styling */
+
+/* start of apartament section styling */
+.apartments-section{
+  
+  color: var(--color-white);
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 3rem;
+  background-color: rgba(35, 35, 24, 0.5);
+  gap: 2rem;
+  transform: translateY(-90px);
+  align-items: center;
+  
+ color: var(--color-black-dark);
+ background-position: center;
+ background-size: cover;
+ background-repeat: no-repeat;
+}
+.single-rooms{
+  margin-top: 3rem;
+  display: block;
+    
+  background-color: var(--color-black-light) ;
+  opacity: 0.6;
+  border-radius: 1rem;
+  width: 40rem;
+  font-size: 1.8rem;
+}
+@media screen and (max-width: 43.75em) {
+  .apartments-section {
+    grid-template-columns: repeat(1, 1fr);
+    font-size: small;
+    align-items: center;
+    justify-content: center;
+  }
+  
+}
+.single-rooms h2, .single-rooms p{
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+.rooms-img-wrapper img{
+  width: 100%;
+  height: 20rem;
+  border-radius: 1rem;
+}
+.rooms-img-wrapper img:hover{
+  opacity: 0.5;
+}
+
+/* //end of apartament section styling */ 
+
+
+
+
