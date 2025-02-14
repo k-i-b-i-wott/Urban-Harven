@@ -32,6 +32,7 @@ header{
   padding: 3rem 2rem;
   background-color: var(--color-white-light);
   margin-bottom: 3rem;
+  min-height: 10rem;
   
 }
 
@@ -135,10 +136,10 @@ max-width: 20vh;
 /* hero section styling */
 
 .hero{ 
-  min-height: 90vh;
+  min-height: 100vh;
   background-color: var(--color-white-light);
   background-image:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-   url("/images/back.jpg");
+   url("/public/images/room3.jpg");
   color: var(--color-black-dark);
   background-position: center;
   background-size: cover;
@@ -210,6 +211,7 @@ max-width: 20vh;
   display: block;
   padding: 2rem;
   background-color: var(--color-black);
+  opacity: 0.4;
   border-radius: 1rem;
   min-height: 22rem;
 
@@ -217,12 +219,23 @@ max-width: 20vh;
 
 .service2{
   display: block;
-  padding: 2rem;
-  background-color: var(--color-black);
+  padding: 2rem;  
   border-radius: 1rem;
   min-height: 22rem;
-  background-image: url();
+  background-image: url(/images/room.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 
+}
+@media screen and (max-width: 43.75em) {
+  .services {
+    grid-template-columns: repeat(1, 1fr);
+    min-height: 15rem;
+    justify-content: center;
+    align-items: center;
+  }
+  
 }
 
 
@@ -234,15 +247,14 @@ max-width: 20vh;
   color: var(--color-white);
   justify-content: center;
   align-items: center;  
-  min-height: 22rem;
-  margin-top: 5rem;
-  margin-bottom: 2rem;
+  
+  margin-bottom: 5rem;
   background-color: rgba(232, 232, 230, 0.5);
-  max-height: 25rem;
+ 
   background-origin: padding-box;
   border-radius: 1.5rem;
   opacity: 0.0 -1.0;
-  margin: 2rem;
+  margin-top: 5rem;
   flex-wrap: wrap;
   }
 
@@ -257,6 +269,23 @@ max-width: 20vh;
 /* end of hero section styling */
 
 /* start of apartament section styling */
+
+.products{
+ color: var(--color-black);
+  margin-top: 3rem;
+  text-align: center;
+  margin-bottom: 5rem;
+  }
+
+  @media screen and (max-width: 43.75em) {
+    .products {
+      grid-template-columns: repeat(1, 1fr);
+      min-height: 15rem;
+      
+    }
+    
+    
+  }
 .apartments-section{
   
   color: var(--color-white);
@@ -264,10 +293,11 @@ max-width: 20vh;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   padding: 3rem;
-  background-color: rgba(35, 35, 24, 0.5);
+  background-color: rgba(226, 226, 213, 0.5);
   gap: 2rem;
   transform: translateY(-90px);
   align-items: center;
+  justify-content: center;
   
  color: var(--color-black-dark);
  background-position: center;
@@ -291,6 +321,11 @@ max-width: 20vh;
     align-items: center;
     justify-content: center;
   }
+  .products {
+    grid-template-columns: repeat(1, 1fr);
+    min-height: 15rem;
+    font-size: 2rem;
+  }
   
 }
 .single-rooms h2, .single-rooms p{
@@ -309,5 +344,65 @@ max-width: 20vh;
 /* //end of apartament section styling */ 
 
 
+/* amenities section styling */
 
+
+.amenities-section{
+  color: var(--color-white);
+  margin-top: 3rem;
+  display: block;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 3rem;
+  background-color: rgba(226, 226, 213, 0.5);
+  gap: 2rem;
+  transform: translateY(-90px);
+  align-items: center;
+  justify-content: center;
+  
+ color: var(--color-black-dark);
+ background-position: center;
+ background-size: cover;
+ background-repeat: no-repeat;
+ background-image: url(/images/room.jpg);
+ font-size: 2rem;
+}
+
+
+.amenities-section h3{
+  font-size: 2rem;
+  font-family: var(--font-secondary);
+  color: var(--color-white);
+  text-align: center;  
+}
+
+.amenities{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;  
+  padding: 10rem 10rem;
+  
+  justify-content: center;
+  align-items: center;  
+  min-height: 18rem;
+  margin-bottom: 2rem;
+  
+  
+  }
+  .amenity {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center; 
+}
+
+  .amenity i{
+    font-size: 3rem;
+    align-items: center;
+  }
+
+
+
+
+
+/* end of amenities section styling  */
 
