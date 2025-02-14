@@ -363,8 +363,9 @@ max-width: 20vh;
  background-position: center;
  background-size: cover;
  background-repeat: no-repeat;
- background-image: url(/images/room.jpg);
- font-size: 2rem;
+ background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/room3.jpg);
+ font-size: 2rem; 
+ border-radius: 1rem;
 }
 
 
@@ -385,6 +386,7 @@ max-width: 20vh;
   align-items: center;  
   min-height: 18rem;
   margin-bottom: 2rem;
+  color: var(--color-white);
   
   
   }
@@ -399,10 +401,48 @@ max-width: 20vh;
     font-size: 3rem;
     align-items: center;
   }
-
-
-
-
-
 /* end of amenities section styling  */
+
+
+/* contact section styling */
+
+
+.contact{
+  display: flex;
+  min-height: 30rem;
+  margin: 3rem 6rem;
+  
+
+}
+
+
+.contact-us{
+  display: block;
+  color: var(--color-white-light);
+}
+.contact-info{
+  color: var(--color-white);
+}
+.contact-info a{
+  text-decoration: none;
+}
+.contact-form{
+  border: solid 1px red;
+}
+
+.contact-form label{
+  flex: 1;
+  font-weight: bold;
+
+}
+.contact-form input{
+  flex: 2;
+  
+}
+
+@media screen {
+  
+}
+
+/* end of contact styling sessions */
 
