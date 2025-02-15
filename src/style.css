@@ -79,10 +79,8 @@ max-width: 20vh;
   header {
     padding: 2rem 1rem;
     flex: wrap;
-    margin-top: 0;
-    border: 1px solid red;
+    margin-top: 0;   
     height: fit-content;
-
     font-size: 2rem;
     color: var(--color-black);
   
@@ -96,7 +94,7 @@ max-width: 20vh;
   }
 
   .logo-wrapper img {
-   min-height: 30rem;
+   min-height: 15rem;
   }
 
   .navbar ul {
@@ -283,7 +281,7 @@ max-width: 20vh;
   border-radius: 1.5rem;
   border: 2px solid red;
   background-color: var(--color-black);
-  opacity: 0.4;
+  opacity: 0.5;
   gap: 3rem;
 }
 
@@ -296,7 +294,13 @@ max-width: 20vh;
 }
 @media screen and (max-width: 43.75em) {
   .about-card{
-    flex-wrap: wrap;    
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    font-size: small;
+    align-items: center;
+    justify-content: center;
+    
 
   }
   
@@ -444,6 +448,16 @@ max-width: 20vh;
     font-size: 3rem;
     align-items: center;
   }
+  @media screen and (max-width: 43.75em) {
+    .amenities-section{
+      grid-template-columns: repeat(2, 1fr);
+      min-height: 15rem;
+      
+    }
+    
+    
+    
+  }
 /* end of amenities section styling  */
 
 
@@ -550,7 +564,7 @@ max-width: 20vh;
   .contact-form{
     min-height: 15rem;
     font-size: small;
-    border: 2px solid #ff7a5c;
+    
   }
   .contact-form input, .contact-form textarea{
     width: 90%;
@@ -574,3 +588,22 @@ max-width: 20vh;
 
 /* end of contact styling sessions */
 
+/* footer section */
+footer{
+  display: flex;
+  flex-direction: column;
+  color: var(--color-white);
+  min-height: 20rem;
+}
+.top-footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bottom-footer{
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  margin-top: 2rem;
+}
