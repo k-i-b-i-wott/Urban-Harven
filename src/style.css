@@ -29,6 +29,7 @@ body{
 header{
   display: flex;
   justify-content: space-between; 
+  
   padding: 3rem 2rem;
   background-color: var(--color-white-light);
   margin-bottom: 3rem;
@@ -39,6 +40,7 @@ header{
 nav ul{
   display: flex;
   list-style: none;
+  justify-content: center;
   gap: 2rem;
 }
 ul li a{
@@ -89,7 +91,7 @@ max-width: 20vh;
  
   .logo-wrapper {
     min-width: none;
-    min-height: 5rem;
+    max-height: 5rem;
     margin-bottom: 2rem;
   }
 
@@ -405,12 +407,13 @@ max-width: 20vh;
 
 
 /* contact section styling */
-
-
 .contact{
-  display: flex;
-  min-height: 30rem;
-  margin: 3rem 6rem;
+  display: block;
+   
+  align-items: center;
+  padding: 2rem;
+  justify-content: center;
+  background-color: var(--color-white);
   
 
 }
@@ -419,30 +422,114 @@ max-width: 20vh;
 .contact-us{
   display: block;
   color: var(--color-white-light);
+  background-color: var(--color-black);
+  opacity: 0.9;
+  color: var(--color-white);
+  padding: 2rem;
+
 }
 .contact-info{
   color: var(--color-white);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 2rem;
+
+  
+
 }
 .contact-info a{
   text-decoration: none;
+  color: var(--color-white);
+  padding: 1.5rem;
+  display: grid;
+
+  
 }
 .contact-form{
-  border: solid 1px red;
+ opacity: rgba(255,255,255,0.6);
+ border-radius: 1.5rem; 
+  padding: 2rem;
+  min-width: 30rem;
 }
 
-.contact-form label{
-  flex: 1;
-  font-weight: bold;
 
+
+.cont{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 6rem;
 }
-.contact-form input{
-  flex: 2;
+.info{
+  justify-content: space-around;
+  margin-top: 6rem;
+  margin-left: 4rem;
+}
+.contact-form input, .contact-form textarea{
+  width: 100%;
+  padding: 1rem;
+    outline: 0;
+    border-width: 0 0 2px;
+    border-color: var(--color-black-dark);
+  }
+  input:focus {
+    border-color: var(--color-secondary);
+    outline: 0.5px solid var(--color-black-light);
+  }
+  
+  .btn-submit{
+    background-color: var(--color-black);
+    color: var(--color-white-light);
+    border-radius: 2px;
+  }
+
+.details{
+  padding-bottom: 2rem;
+}
+
+@media screen and (max-width: 56.25em) {
+  .contact {
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    font-size: small;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  
+  .cont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: small;
+    
+  }
+
+  .contact-form{
+    min-height: 15rem;
+    font-size: small;
+    border: 2px solid #ff7a5c;
+  }
+  .contact-form input, .contact-form textarea{
+    width: 90%;
+    
+      outline: 0;
+      border-width: 0 0 .5px;
+      border-color: var(--color-black-dark);
+    }
+    .info{
+      justify-content: space-around;
+      margin-top: .5rem;
+      margin-left: 0;
+    }
+
+    .contact-us{
+      margin-top: 3rem;
+    }
   
 }
 
-@media screen {
-  
-}
 
 /* end of contact styling sessions */
 
