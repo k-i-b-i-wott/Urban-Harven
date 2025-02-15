@@ -265,10 +265,47 @@ max-width: 20vh;
       grid-template-columns: repeat(2, 1fr);
       min-height: 15rem;
     }
-    
+   
     
   }
+
+
 /* end of hero section styling */
+/* about section styling */
+
+.about-card{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  min-height: 25rem;  
+  color: var(--color-white);
+  padding: 2rem 6rem;
+  margin-top: 3rem;
+  border-radius: 1.5rem;
+  border: 2px solid red;
+  background-color: var(--color-black);
+  opacity: 0.4;
+  gap: 3rem;
+}
+
+.about-img{
+  background-image: url(/images/about3.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 1.5rem;
+}
+@media screen and (max-width: 43.75em) {
+  .about-card{
+    flex-wrap: wrap;    
+
+  }
+  
+  
+  
+}
+
+
+/* end of about styling */
 
 /* start of apartament section styling */
 
@@ -285,6 +322,7 @@ max-width: 20vh;
       min-height: 15rem;
       
     }
+    
     
     
   }
@@ -327,6 +365,9 @@ max-width: 20vh;
     grid-template-columns: repeat(1, 1fr);
     min-height: 15rem;
     font-size: 2rem;
+  }
+  .single-rooms{
+    max-width: 20rem;
   }
   
 }
