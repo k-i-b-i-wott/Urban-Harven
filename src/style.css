@@ -18,6 +18,11 @@
 html{
   font-size: 62.5%;
 }
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
 
 body{
   font-family: var(--font-primary);
@@ -33,9 +38,7 @@ header{
   padding: 3rem 2rem;
   background-color: var(--color-white-light);
   margin-bottom: 3rem;
-  min-height: 10rem;
-  position: -webkit-sticky;
-  position: sticky;
+  min-height: 10rem; 
   top: 0;
   opacity: 1;
   
@@ -81,10 +84,15 @@ max-width: 20vh;
 
 @media screen and (max-width: 50em) {
   header {
+    /* flex-wrap: wrap;
     display: block;
     gap: 3rem;
     font-size: small;    
     color: var(--color-black);
+    align-items: center;
+    justify-content: center; */
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
   
   }
  
@@ -106,25 +114,25 @@ max-width: 20vh;
   }
 
   .navbar ul {
- display: flex;
- font-size: small;
+    display: flex;
+    flex-direction: column;
+  
+width: fit-content;
+flex-wrap: wrap;
   }
 
   .socials {
-    margin-top: 10px;
-   display: flex;
-  }
-  .navbar ul{
     display: flex;
-  list-style: none;
-  justify-content: center;
-  
+    flex-direction: column;
   }
 }
 
 @media screen and (max-width: 480px) {
   .logo-wrapper img {
     max-width: 70%;
+  }
+  .navbar{
+    width: fit-content;
   }
  
 }
@@ -148,11 +156,17 @@ max-width: 20vh;
   align-items: center;
   border-radius: 2rem;
 }
-@media screen and (max-width: 43.75em) {
+@media screen and (max-width: 50em) {
     .hero {
-      min-height: 50vh;
+      min-height: 100vh;
     }
   }
+  @media screen and (max-width: 43.em) {
+    .hero {
+      min-height: 100vh;
+    }
+  }
+
   
  
 .hero-text {
@@ -183,7 +197,7 @@ max-width: 20vh;
 }
 .hero-desc2 h2{
   /* Border around the h2 */
-  padding: 10px 20px; /* Space inside the border */
+  padding: 1.5rem; /* Space inside the border */
   text-align: center; /* Center text inside */
   display: inline-block;
   font-size: 2rem;
@@ -196,15 +210,13 @@ max-width: 20vh;
 
 .services{
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  
-  gap: 2rem;  
-  padding: 10rem 10rem;
+  grid-template-columns: repeat(2, 1fr);  
+  gap: 2rem; 
   color: var(--color-white);
   justify-content: center;
   align-items: center;  
   min-height: 22rem;
-  margin-bottom: 2rem;
+  margin: 2rem;
   }
 
 .service1{
@@ -228,12 +240,17 @@ max-width: 20vh;
   background-repeat: no-repeat;
 
 }
-@media screen and (max-width: 43.75em) {
+@media screen and (max-width: 48em) {
   .services {
     grid-template-columns: repeat(1, 1fr);
     min-height: 15rem;
     justify-content: center;
     align-items: center;
+  }
+  .service2,
+  .service1{
+    border-radius: 2rem;
+    padding: 2;
   }
   
 }
@@ -258,7 +275,7 @@ max-width: 20vh;
   flex-wrap: wrap;
   }
 
-  @media screen and (max-width: 43.75em) {
+  @media screen and (max-width: 48em) {
     .stats {
       grid-template-columns: repeat(2, 1fr);
       min-height: 15rem;
@@ -329,24 +346,30 @@ max-width: 20vh;
     
     
   }
-.apartments-section{
-  
-  color: var(--color-white);
-  margin-top: 3rem;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  padding: 3rem;
-  background-color: rgba(226, 226, 213, 0.5);
-  gap: 2rem;
-  transform: translateY(-90px);
+.apartments-section {
+  display: grid;  
+  grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+  gap: 1em;
+  background-color: rgba(232, 232, 230, 0.5);
+  padding-left: 2em; 
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  
- color: var(--color-black-dark);
- background-position: center;
- background-size: cover;
- background-repeat: no-repeat;
+  color: var(--color-white);
 }
+
+@media screen and (max-width: 43.75em) {
+  .apartments-section {
+    flex-direction: column;
+    align-items: center;
+    transform: none;
+    margin-top: 2rem;
+    padding: 2rem;
+  }
+  .single-rooms{
+    min-width: fit-content;
+  }
+}
+
 .single-rooms{
   margin-top: 3rem;
   display: block;
@@ -354,15 +377,20 @@ max-width: 20vh;
   background-color: var(--color-black-light) ;
   opacity: 0.6;
   border-radius: 1rem;
-  width: 40rem;
+  width: 30rem;
   font-size: 1.8rem;
 }
-@media screen and (max-width: 43.75em) {
+@media (max-width: 50em) {
   .apartments-section {
-    grid-template-columns: repeat(1, 1fr);
-    font-size: small;
-    align-items: center;
-    justify-content: center;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* For screens up to 30em (approx. 480px) - adjust to 1 item per row */
+@media (max-width: 30em) {
+  .apartments-section {
+    grid-template-columns: 1fr;
   }
   .products {
     grid-template-columns: repeat(1, 1fr);
@@ -370,7 +398,7 @@ max-width: 20vh;
     font-size: 2rem;
   }
   .single-rooms{
-    max-width: 20rem;
+    max-width: 10rem;
   }
   
 }
@@ -446,6 +474,23 @@ max-width: 20vh;
   .amenity i{
     font-size: 3rem;
     align-items: center;
+    border-radius: 50%;
+    background-color: #1a1a1a;
+    width: 5rem;
+    text-decoration: none;
+  font-size: 1.6rem;
+  color: var(--color-black-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  --header-social-icon-width: 3rem;
+  width: var(--header-social-icon-width);
+  height: var(--header-social-icon-width);
+  border-radius: 50%;
+  border: 1px solid currentColor;
+  }
+  .amenity p{
+    text-align: left;
   }
   @media screen and (max-width: 43.75em) {
     .amenities-section{
@@ -642,6 +687,7 @@ footer{
   display: flex;
   align-items: center;
   justify-content: center;
+  justify-content: center;
   color: var(--color-white);
   align-items: baseline;
 
@@ -652,6 +698,7 @@ footer{
   font-size: small;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 @media screen and (max-width: 50em) {
@@ -669,7 +716,7 @@ footer{
     align-items: center;
     justify-content: center;
   }
-  .footer-socials{
+  .bottom-footer .footer-socials {
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -688,3 +735,4 @@ footer{
     
   }
 }
+/* end of footer styling */
