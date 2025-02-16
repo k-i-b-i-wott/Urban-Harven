@@ -34,6 +34,10 @@ header{
   background-color: var(--color-white-light);
   margin-bottom: 3rem;
   min-height: 10rem;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  opacity: 1;
   
 }
 
@@ -151,12 +155,12 @@ max-width: 20vh;
   }
   
  
-.hero-text h2{
+.hero-text {
   font-size: 2rem;
   font-family: var(--font-secondary);
   color: var(--color-white);
   text-align: center;
-  margin-bottom: 1rem;
+  margin-top: 2rem;
 }
 .hero-desc{
   align-items: center;
