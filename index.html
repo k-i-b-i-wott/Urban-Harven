@@ -23,21 +23,21 @@
       <nav class="navbar">
         <ul>
           <li>
-            <a href="/">Home</a>
+            <a href="#home">Home</a>
           </li>
           <li>
-            <a href="/services">Services</a>
-          </li>
-          <li>
-            <a href="/products">Products</a>
+            <a href="#rooms">Rooms</a>
           </li>
 
           <li>
-            <a href="/contact">Contact</a>
+            <a href="#contact">Contact</a>
           </li>
 
           <li>
-            <a href="/about">About</a>
+            <a href="#about">About Us</a>
+          </li>
+          <li>
+            <a href="#amenities">Amenities</a>
           </li>
         </ul>
       </nav>
@@ -59,7 +59,7 @@
         </a>
       </div>
     </header>
-    <section class="hero">
+    <section class="hero" id="home">
       <div class="hero-text">
         <h2>Choice around the world</h2>
       </div>
@@ -86,7 +86,7 @@
         <div class="service2"></div>
       </section>
     </section>
-    <div class="about-card">
+    <div class="about-card" id="about">
       <div class="about-img"></div>
       <div class="about-text">
         <h2>Urban Haven Apartments</h2>
@@ -122,7 +122,7 @@
       <h3 class="products">Take a look at our amazing Products</h3>
     </div>
 
-    <div class="apartments-section">
+    <div class="apartments-section" id="rooms">
       <div class="single-rooms">
         <div class="rooms-img-wrapper">
           <img src="/images/room3.jpg" alt="single Rooms" />
@@ -222,7 +222,7 @@
       </div>
     </div>
 
-    <div class="amenities-section">
+    <div class="amenities-section" id="amenities">
       <h3>Our Amenities</h3>
 
       <div class="amenities">
@@ -273,7 +273,7 @@
       </div>
     </div>
 
-    <div class="contact">
+    <div class="contact" id="contact">
       <div class="info">
         <h2 style="align-items: center">Contact Us</h2>
       </div>
@@ -337,24 +337,68 @@
     </div>
     <footer>
       <div class="top-footer">
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro at
-          magni sed debitis, dolorem ipsa doloremque beatae necessitatibus minus
-          non.
+        <div class="footer-column">
+          <h3 class="footer-title">connect</h3>
+          <p class="footer-text">
+            Nestled far beyond the word mountains, away from distant lands,
+            Urban Haven Apartments offers a retreat of comfort and modern
+            living.
+          </p>
         </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore,
-          obcaecati iure quo pariatur a in debitis explicabo! Enim, aperiam. Ab.
+        <div class="footer-column">
+          <h3 class="footer-title">company</h3>
+          <ol class="footer-list">
+            <li class="footer-list-item"><a href="#about">about us</a></li>
+            <li class="footer-list-item"><a href="#">blog</a></li>
+            <li class="footer-list-item"><a href="#contact">contact</a></li>
+            <li class="footer-list-item"><a href="#rooms">Apartments</a></li>
+          </ol>
         </div>
-        <div>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta
-          ratione, dignissimos consequatur mollitia enim accusantium fugiat iure
-          voluptas corporis laudantium?
+
+        <div class="footer-column">
+          <h3 class="footer-title">legal</h3>
+          <ol class="footer-list">
+            <li class="footer-list-item"><a href="#">join us</a></li>
+            <li class="footer-list-item"><a href="#">blog</a></li>
+            <li class="footer-list-item"><a href="#">privacy and policy</a></li>
+            <li class="footer-list-item">
+              <a href="#">terms and conditions</a>
+            </li>
+          </ol>
+        </div>
+        <div class="footer-column">
+          <h3 class="footer-title">reach out</h3>
+          <div class="footer-contact">
+            <i class="fa-solid fa-map"></i>
+            <p class="footer-text">Kenyatta Road,Kiharu, Murang'a</p>
+          </div>
+
+          <div class="footer-contact">
+            <i class="fa-solid fa-phone"></i>
+            <p class="footer-text">+254718764327</p>
+          </div>
+
+          <div class="footer-contact">
+            <i class="fa-solid fa-paper-plane"></i>
+            <p class="footer-text">urhaven@apartments.com</p>
+          </div>
         </div>
       </div>
 
       <div class="bottom-footer">
-        &copy;2025 Built by Biwott
+        <div class="footer-socials">
+          <a href="https://www.twitter.com">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="https://www.instagram.com">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="">
+            <i class="fab fa-facebook"></i>
+          </a>
+        </div>
+        <br />
+        <div class="copyright">&copy;2025 Built by Biwott</div>
       </div>
     </footer>
   </body>
